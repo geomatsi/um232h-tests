@@ -32,13 +32,13 @@ dump_data(char *b, int n)
 
 void f_csn(int level)
 {
-    um232h_gpiol_set(&fc, BIT_G2, level);
+    um232h_gpiol_set(&fc, BIT_L2, level);
     return;
 }
 
 void f_ce(int level)
 {
-    um232h_gpiol_set(&fc, BIT_G1, level);
+    um232h_gpiol_set(&fc, BIT_L1, level);
     return;
 }
 
