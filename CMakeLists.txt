@@ -8,6 +8,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake/Modules)
 ## executable targets
 
 add_executable(gpio_test gpio_test.c um232h.c)
+add_executable(ssd_test ssd_test.c um232h.c)
 add_executable(nrf24_test nrf24_test.c um232h.c delay.c)
 
 ## find headers
@@ -44,3 +45,4 @@ include_directories(${FTDI_INCLUDE_DIR})
 
 target_link_libraries(nrf24_test ${FTDI_LIBRARY} ${NRF24_LIBRARY})
 target_link_libraries(gpio_test ${FTDI_LIBRARY})
+target_link_libraries(ssd_test ${FTDI_LIBRARY})
