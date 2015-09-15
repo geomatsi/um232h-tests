@@ -1,5 +1,51 @@
 /*
  * Example: control seven-segment display using UM232H gpio lines
+ *
+ * 7-segment display in use: 3ЛС321А (RUS)
+ *
+ * More about curcuitry
+ *
+ *
+ *       -- SLD           GND --
+ *       -- VIO           5V0 --
+ *       -- 3V3           USB --
+ *       -- PU2           RST --
+ *       -- PU1           AC9 --
+ *       -- GND           AC8 --
+ *       -- AD0           AC7 --
+ *       -- AD1   UM232H  AC6 --
+ *       -- AD2           AC5 --
+ *       -- AD3           AC4 --
+ *       -- AD4           AC3 --
+ *       -- AD5           AC2 --
+ *       -- AD6           AC1 --
+ *       -- AD7           AC0 --
+ *
+ *
+ *
+ *       -- I01  3ЛС321А  I14 --
+ *       -- I02    --     I13 --
+ *       -- I03   |  |    I12 --
+ *       -- I04    --     I11 --
+ *       -- I05   |  |    I10 --
+ *       -- I06    --  /  I09 --
+ *       -- I07           I08 --
+ *
+ *
+ * Connections:
+ *   VIO - 3V3
+ *   USB - 5V0
+ *   GND - I04
+ *   GND - I10
+ *   AD4 - I07
+ *   AD5 - I06
+ *   AD6 - I02
+ *   AD7 - I01
+ *   AC0 - I14
+ *   AC1 - I13
+ *   AC2 - I09
+ *   AC3 - I08
+ *
  */
 
 #include <unistd.h>
